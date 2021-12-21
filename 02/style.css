@@ -1,0 +1,73 @@
+* {
+    margin : 0; padding : 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width : 250px;
+    height: 250px;
+
+    border : 3px solid black;
+    border-radius: 50px;    
+    
+    transition: transform 250ms;
+}
+
+.box:hover{
+    border: 0px;
+
+    animation-name: moveBox;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    
+    transform: scale(0.95);
+}
+
+@keyframes moveBox {
+    0% {
+        background-color: #59C173;
+    }
+    
+    50% {
+        background-color: #a17fe0;
+    }
+    
+    100% {
+        background-color: #5D26C1;
+    }
+}
+
+.comment {
+    font-size: 1.5em;
+    
+    animation-name: moveComment;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.box:hover ~ .comment{
+    visibility: hidden;
+}
+
+@keyframes moveComment {
+    0% {
+        transform: translateY(20px);
+    }
+    
+    100% {
+        transform: translateY(35px);
+    }
+}
