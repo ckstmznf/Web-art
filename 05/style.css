@@ -1,0 +1,52 @@
+@import "./../font.css";
+
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+
+button {
+    color : white;
+    text-align: center;
+    font-family: "GmarketSansBold";
+    font-size: 1.5em;
+
+    border : 2px solid rgba(65,185,255,1);
+    border-radius: 12px;
+    
+    background-color: rgba(65,185,255,1);
+    background-image: linear-gradient(90deg, rgba(57,45,255,1) 0%, rgba(65,185,255,1) 100%);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: right;
+    
+    padding : 12px;
+    
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+
+    transition: background-size 300ms;
+    /* animation: background-animation 1500ms infinite; */
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-size: 100% 100%;
+    background-position-x: left;
+}
+
+@keyframes background-animation {
+    from {
+        background-size: 0% 100%;
+        background-position-x: right;
+    }
+    to {
+        background-size: 100% 100%;
+        background-position-x: left;
+    }
+}
