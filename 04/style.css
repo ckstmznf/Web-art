@@ -74,12 +74,13 @@ body {
 }
 
 .business-card .front-side .name-job-wrap .name {
-    font-size: 24px;
+    font-size: 1.5em;
 
     font-weight: 500;
 }
 
 .business-card .front-side .name-job-wrap .job {
+    font-size: 1em;
     font-weight: 300;
     letter-spacing: 1.5px;
 }
@@ -146,4 +147,19 @@ body {
 
 .business-card:hover .back-side {
     transform: rotateY(0deg);
+}
+
+@media (max-width : 550px) {
+    .business-card .front-side .unit-logo {
+        margin : 8px 16px;
+    }
+
+    .business-card .front-side .name-job-wrap {
+        font-size: 14px;
+        /* padding : 8px 0 6px 8px; */
+    }
+
+    .profile-data {
+        padding : 4px 20px;
+    }
 }
